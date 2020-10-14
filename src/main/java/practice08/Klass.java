@@ -16,8 +16,8 @@ public class Klass {
         return String.format("Class %d", getNumber());
     }
 
-    public Student assignLeader(Student jerry) {
-        return leader = jerry;
+    public Student assignLeader(Student name) {
+        return leader = name;
     }
 
     public Student getLeader() {
