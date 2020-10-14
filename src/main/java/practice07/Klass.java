@@ -10,4 +10,8 @@ public class Klass {
     public int getNumber() {
         return klass;
     }
+
+    public String getDisplayName() {
+        return String.format("Class %d", klass);
+    }
 }
