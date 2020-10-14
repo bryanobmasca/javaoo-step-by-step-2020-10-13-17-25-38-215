@@ -29,11 +29,11 @@ public class Teacher extends Person{
         return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
     }
 
-    public String introduceWith(Student jerry) {
+    public String introduceWith(Student name) {
         String teachMessage = "teach";
-        if (!jerry.getKlass().equals(getKlass())){
+        if (!name.getKlass().equals(getKlass())){
             teachMessage = "don't " + teachMessage;
         }
-        return String.format("%s I am a Teacher. I %s %s.", super.introduce(), teachMessage, jerry.getName());
+        return String.format("%s I am a Teacher. I %s %s.", super.introduce(), teachMessage, name.getName());
     }
 }
