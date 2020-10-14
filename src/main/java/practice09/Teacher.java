@@ -8,6 +8,10 @@ public class Teacher extends Person{
         this.klass = klass;
     }
 
+    public Teacher(int id, String name, int age) {
+        super(id, name, age);
+    }
+
     public Klass getKlass() {
         return klass;
     }
@@ -16,6 +20,9 @@ public class Teacher extends Person{
         String klassNumber = "";
         if (klass != null){
             klassNumber = String.format("Class %d", klass.getNumber());
+        }
+        else {
+            klassNumber = "No Class";
         }
         return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
     }
