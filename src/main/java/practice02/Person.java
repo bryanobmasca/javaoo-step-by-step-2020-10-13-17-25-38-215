@@ -9,11 +9,11 @@ public class Person {
     }
 
     public String getName() {
-        return "Tom";
+        return name;
     }
 
     public int getAge() {
-        return 21;
+        return age;
     }
 
     public String introduce() {
