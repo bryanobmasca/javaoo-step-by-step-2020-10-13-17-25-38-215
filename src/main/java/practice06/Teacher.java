@@ -10,4 +10,8 @@ public class Teacher extends Person{
     public int getKlass() {
         return klass;
     }
+
+    public String introduce(){
+        return String.format("%s I am a Teacher. I teach Class %d.", super.introduce(), klass);
+    }
 }
