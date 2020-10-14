@@ -30,10 +30,10 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student jerry) {
-        String teachMessage = "";
-        if (jerry.getKlass().equals(getKlass())){
-            teachMessage = "teach " + jerry.getName();
+        String teachMessage = "teach";
+        if (!jerry.getKlass().equals(getKlass())){
+            teachMessage = "don't " + teachMessage;
         }
-        return String.format("%s I am a Teacher. I %s.", super.introduce(), teachMessage);
+        return String.format("%s I am a Teacher. I %s %s.", super.introduce(), teachMessage, jerry.getName());
     }
 }
