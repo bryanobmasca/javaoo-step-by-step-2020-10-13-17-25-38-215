@@ -37,4 +37,13 @@ public class Teacher extends Person{
         }
         return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
     }
+
+    public boolean isTeaching(Student student) {
+        if (!klassLinkedList.contains(student.getKlass())){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }
