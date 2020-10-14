@@ -11,4 +11,12 @@ public class Teacher extends Person{
     public Klass getKlass() {
         return klass;
     }
+
+    public String introduce(){
+        String klassNumber = "";
+        if (klass != null){
+            klassNumber = String.format("Class %d", klass.getNumber());
+        }
+        return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
+    }
 }
