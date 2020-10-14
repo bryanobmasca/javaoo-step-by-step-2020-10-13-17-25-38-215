@@ -14,18 +14,26 @@ public class Teacher extends Person{
 
     }
 
+    public Teacher(int id, String name, int age) {
+        super(id, name, age);
+    }
+
     public LinkedList<Klass> getClasses() {
         return klassLinkedList;
     }
 
     public String introduce(){
         String klassNumber = "Class ";
-        for (Klass classesList : klassLinkedList){
-            klassNumber += classesList.getNumber() + ", ";
+        if (klassLinkedList != null) {
+            for (Klass classesList : klassLinkedList) {
+                klassNumber += classesList.getNumber() + ", ";
+            }
+            if (klassNumber.endsWith(", ")) {
+                klassNumber = klassNumber.substring(0, klassNumber.length() - 2);
+            }
         }
-        if(klassNumber.endsWith(", "))
-        {
-            klassNumber = klassNumber.substring(0,klassNumber.length() - 2);
+        else {
+            klassNumber = "No Class";
         }
         return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
     }
