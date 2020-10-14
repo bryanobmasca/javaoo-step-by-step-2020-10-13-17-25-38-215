@@ -49,6 +49,9 @@ public class Teacher extends Person{
 
     public String introduceWith(Student student) {
         String teachMessage = "teach";
+        if (!klassLinkedList.contains(student.getKlass())){
+            teachMessage = "don't " + teachMessage;
+        }
         return String.format("%s I am a Teacher. I %s %s.", super.introduce(), teachMessage, student.getName());
     }
 }
