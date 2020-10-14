@@ -28,4 +28,12 @@ public class Teacher extends Person{
         }
         return String.format("%s I am a Teacher. I teach %s.", super.introduce(), klassNumber);
     }
+
+    public String introduceWith(Student jerry) {
+        String teachMessage = "";
+        if (jerry.getKlass().equals(getKlass())){
+            teachMessage = "teach " + jerry.getName();
+        }
+        return String.format("%s I am a Teacher. I %s.", super.introduce(), teachMessage);
+    }
 }
