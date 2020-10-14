@@ -6,4 +6,8 @@ public class Klass {
     public Klass(int klass) {
         this.klass = klass;
     }
+
+    public int getNumber() {
+        return klass;
+    }
 }
