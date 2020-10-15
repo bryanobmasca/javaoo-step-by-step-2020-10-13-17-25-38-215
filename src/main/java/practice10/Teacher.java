@@ -31,19 +31,16 @@ public class Teacher extends Person{
     }
 
     public boolean isTeaching(Student student) {
-        if (!klassLinkedList.contains(student.getKlass())){
-            return false;
-        }
-        else{
-            return true;
-        }
+        boolean isTeaching = (!klassLinkedList.contains(student.getKlass()))
+                ? false
+                :  true;
+        return isTeaching;
     }
 
     public String introduceWith(Student student) {
-        String teachMessage = "teach";
-        if (!klassLinkedList.contains(student.getKlass())){
-            teachMessage = "don't " + teachMessage;
-        }
+        String teachMessage = (!klassLinkedList.contains(student.getKlass()))
+                ? "don't teach"
+                : "teach";
         return String.format("%s I am a Teacher. I %s %s.", super.introduce(), teachMessage, student.getName());
     }
 }
